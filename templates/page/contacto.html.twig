@@ -1,0 +1,37 @@
+{% extends "base.html.twig" %}
+
+{% block javascript %}
+<script type="text/javascript" src="JS/contact/code.js" ></script>
+{% endblock %}
+
+{% block logo %}
+        <img src="img/janex_logo.png" width="250" height="150" alt="Janex_logo" id="logo_principal"/></p>
+{% endblock %}
+
+{% block body %}
+
+    <p>En este apartado podras enviarnos un mensaje con cualquier consulta que nos quieras hacer o cualquier
+         duda que te haya surgido viendo nuestra página web. Recuerda que si lo que quieres es concertar una cita,
+          debes acudir a la página "CONCERTAR CITA" que se encuentra al final del menú lateral.
+    </p>
+        <form id="form">
+        <div class="dosColumnas">
+            <label>Nombre</label><br>
+            <input type="text" name="nombre" id="name"/>
+            <label>E-mail</label><br>
+            <input type="text" name="e-mail" id="mail"/>
+            <label>Teléfono</label><br>
+            <input type="text" name="teléfono" id="telf"/>
+            <label>Ciudad</label><br>
+            <input type="text" name="city" id="city"/>
+            
+        </div>
+            <label>Mensaje</label><br>
+            <textarea name="mensaje" cols="20" rows="5" id="msg"></textarea>
+            
+            <input type="button" value="Enviar" class="button" id="enviar"/>
+            
+            <input type="button" value="Borrar" class="button" id="borrar"/>
+        </form>
+
+{% endblock %}

@@ -1,0 +1,374 @@
+
+/*FORMATO GENERAL DE LA WEB*/
+
+*{
+    margin: auto;
+    padding: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: justify;    
+    font-size: 14px;
+}
+
+
+/*COPYRIGHT*/
+
+.copyright{
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 120px;
+}
+
+.img-copy{
+    margin-top: 15px;
+    width: 80px;
+}
+
+
+/*CABECERA LOGO*/
+
+#logo-container{
+    margin-top: -80px;
+    margin-bottom: 40px;
+    display: flex;
+    margin-left: auto;
+    width: 280px;
+}
+
+
+/*LAYOUT COMO PÁGINA Y FONDO CON FOTO*/
+
+body{
+    width: 75%;
+    max-width: 1200px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 0.1em;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 4px 35px 0 rgb(0, 0, 0);  
+}
+
+.contenido{
+    background: rgb(255, 255, 255);
+    border: 1px solid grey;
+    padding: 3cm;
+}
+
+html { background-image: url(../img/finish-flag.jpg)}
+
+.info{
+    display: none;
+}
+
+
+
+
+/*MENU DE INICIO*/
+
+input#abrir-cerrar {
+    visibility:hidden;
+    position: absolute;
+    top: -9999px;
+}
+
+
+label[for="abrir-cerrar"] {
+    cursor: pointer;
+    padding: 15px;
+    background-color:rgb(0, 0, 0);
+    color:rgb(0, 238, 255);
+    display: inline-block;
+    width: auto;
+    box-sizing:border-box;
+    box-shadow: 0 4px 5px 0 rgb(0, 0, 0);
+}
+
+.cerrar {
+    display:none;
+}
+
+#sidebar {
+    width:0;
+}
+
+
+input#abrir-cerrar:checked ~ #sidebar {
+    width:250px;
+}
+
+input#abrir-cerrar:checked + label[for="abrir-cerrar"], input#abrir-cerrar:checked ~ #contenido {
+    margin-left:35px;
+    transition: margin-left .4s;
+    
+}
+
+
+input#abrir-cerrar:checked + label[for="abrir-cerrar"] .cerrar {
+    display:inline;
+}
+
+input#abrir-cerrar:checked + label[for="abrir-cerrar"] .abrir {
+    display:none;
+}
+
+.sidebar {
+    position: absolute;
+    height: 97%;
+    width: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #000000;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding: 1rem 0;
+    box-sizing:border-box;
+    box-shadow: 0 4px 35px 0 rgb(0, 0, 0);
+}
+
+.sidebar .boton-cerrar {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 2rem;
+    display: block;
+    padding: 0;
+    line-height: 1.5rem;
+    margin: 0;
+    height: auto;
+    width: auto;
+    text-align: center;
+
+}
+
+.sidebar ul, .sidebar li{
+    margin: 2px;
+    padding: 0 10px ;
+    list-style: none;
+}
+
+.sidebar ul {
+    margin: 20px auto;
+    display: block;
+    width: 50%;
+    min-width:200px;
+}
+
+.sidebar a {
+    display: block;
+    font-size: 120%;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    
+}
+
+.sidebar a:hover{
+    color:#e2cf26;
+    background-color: rgb(0, 0, 0);
+
+}
+
+
+.abrir-cerrar {
+    color: #000000;
+    font-size:1rem;   
+}
+
+
+
+/*IMÁGENES CENTRADAS*/
+
+img{
+    display: block;
+    height: auto;
+    max-width: 100%;
+
+}
+
+.marcas{
+    margin-bottom: 50px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+/*FORMATO DE LAS TABLAS*/
+
+table {
+    border-collapse: collapse;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing:border-box;
+    box-shadow: 0 4px 5px 0 rgb(0, 0, 0);
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    
+  }
+
+ .azul th{
+    background-color:rgb(0, 26, 255);
+    color: white;
+  }
+
+  .rojo th{
+    background-color: rgb(255, 0, 0);
+    color: white;
+  }
+
+  .verde th{
+    background-color: rgb(51, 255, 0);;
+    color: white;
+  }
+
+  
+
+/*FORMATO DE DOS COLUMNAS*/
+
+.dosColumnas{
+    column-count: 2;
+}
+
+
+
+/*FORMULARIO*/
+
+.button {
+    background-color: #000000;
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 8px 0 #000000;
+  }
+
+  .button:hover {
+    background-color: #a1e8fa;
+    color: rgb(0, 0, 0);
+  }
+
+*{box-sizing:border-box;}
+
+  form{
+      width: 95%;
+      height: auto;
+      margin-top: 35px;
+  }
+  
+  form label{
+      width: auto;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 12px;
+      font-weight: none;
+      display:inline-block;
+  }
+  
+  form input[type="text"]{
+      width: 100%;
+      padding:3px 10px;
+      border:1px solid #f6f6f6;
+      border-radius:5px;
+      background-color:#f6f6f6;
+      margin:8px 0;
+      display:inline-block;
+      box-shadow: 0 1px 5px 0 #000000;
+  }
+  
+  form input[id="enviar"]{
+      width:35%;
+      padding:8px 16px;
+      margin-top:32px;
+      border:1px solid #000;
+      border-radius:5px;
+      color:#fff;
+      background-color:#000;
+      float: left;
+  } 
+
+  form input[id="borrar"]{
+    width:35%;
+    padding:8px 16px;
+    margin-top:32px;
+    border:1px solid #000;
+    border-radius:5px;
+    color:#fff;
+    background-color:#000;
+    float: right;
+} 
+
+  
+  textarea{
+      width: 100%;
+      height:100px;
+      border:1px solid #f6f6f6;
+      border-radius:3px;
+      background-color:#f6f6f6;			
+      margin:8px 0;
+      resize:none;
+      display:block;
+      box-shadow: 0 1px 5px 0 #000000;
+  }
+
+.cita{
+    margin-left: auto;
+}
+
+
+  /*ESTILO DE LOS TÍTULOS*/
+
+
+  h1{
+    padding-bottom: 20px;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(64, 107, 224);
+  }
+
+ .red{ /*Honda & Ducati*/
+    margin-bottom: 10px;
+    margin-top: 40px;
+    font-size: 36px;
+    text-align: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(255, 0, 0);
+}
+
+.green{ /*Kawasaki*/
+    font-size: 36px;
+    margin-bottom: 10px;
+    margin-top: 40px;
+    text-align: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(51, 255, 0);
+}
+
+.blue{ /*Yamaha*/
+    font-size: 36px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(0, 26, 255);
+}
+
+/*separacion info motos*/
+.info-motos{
+    margin-top: 20px;
+}
