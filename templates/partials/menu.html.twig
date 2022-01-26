@@ -1,0 +1,25 @@
+<input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value="">
+    <label for="abrir-cerrar">&#9776; <span class="abrir"></span><span class="cerrar"></span></label>
+    <div id="sidebar" class="sidebar">
+        <ul class="menu">
+            <li><a href="/">INICIO</a></li>
+
+                {% for marca in marcas %}
+                <li><a href="/marca/{{marca.nombre | lower}}/{{marca.id}}">{{marca.nombre | upper}}</a>
+
+                        <ul class="submenu">
+
+                    {% for moto in marca.motos %}
+
+                    <li><a href="/marca/{{marca.nombre | lower}}/modelo#{{moto.alias}}/{{moto.id}}">{{moto.alias | upper}}</a></li>
+
+                    {% endfor %}
+                
+                </ul></li>
+
+                {% endfor %}
+
+            <li><a href="/contacto">CONTACTO</a></li>
+                <li><a href="/cita">CONCERTAR CITA</a></li>
+        </ul>
+    </div>

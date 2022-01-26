@@ -1,0 +1,36 @@
+{% extends "base.html.twig" %}
+
+{% block javascript %}
+<script type="text/javascript" src="JS/getBiggerPics/code.js"></script>
+{% endblock %}
+
+{% block logo %}
+        <div class="dosColumnas">
+            <img src="/img/janex_logo.png" width="250" height="150" alt="Janex_logo" id="logo_principal" />
+            <a title="SITIO OFICIAL" href="https://www.yamaha-motor.eu/es/es/"><img src="/img/yamaha_logo.png" width="290" height="175" alt="Yamaha_Logo"/></a>
+        </div>
+{% endblock %}
+
+{% block body %}
+
+{% for moto in motos %}
+    
+    <h2 id="{{moto.alias}}" class="{{moto.marca.color}}">{{moto.nombre}}</h2>
+        <p>{{moto.descripcion}}</p>
+        <p><img src="/{{moto.img}}" width="800" height="500" alt="{{moto.nombre}}"/></p>
+        <table class="{{moto.marca.tableclass}}">
+            <caption><i> {{moto.nombre}} - Ficha técnica</i></caption>
+            <tr>
+            <th>POTENCIA</th><th>CILINDRADA</th><th>Nº CILINDROS</th><th>PRECIO</th>
+            </tr>
+            <tr>
+                <td>{{moto.potencia}}</td><td>{{moto.cilindrada}}</td><td>{{moto.cilindros}}</td><td>{{moto.precio}}</td>
+            </tr>
+        </table>
+
+{% endfor %}
+
+    
+
+{% endblock %}
+

@@ -5,16 +5,24 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Doctrine\Persistence\ManagerRegistry;
+use App\Entity\Marcas;
+use App\Entity\Motos;
 
 class PageController extends AbstractController
 {
     /**
      * @Route("/", name="inicio")
      */
-    public function index(): Response
+    public function index(ManagerRegistry $doctrine): Response
     {
+        $repositorio = $doctrine -> getRepository(Marcas::class);
+        $marcas = $repositorio->findAll();
+
+
         return $this->render('page/index.html.twig', [
             'controller_name' => 'PageController',
+            'marcas' => $marcas
         ]);
     }
 
@@ -59,42 +67,22 @@ class PageController extends AbstractController
     }
 
     /**
-     * @Route("/ducati", name="ducati")
+     * @Route("/marca/{nombre}/{id}", name="marca")
      */
-    public function ducati(): Response
+    public function marca($id, ManagerRegistry $doctrine): Response
     {
-        return $this->render('page/ducati.html.twig', [
+        $repositorio = $doctrine -> getRepository(Motos::class);
+        $motos = $repositorio->findBy(['marca' => $id]);
+
+        $repositorio = $doctrine -> getRepository(Marcas::class);
+        $marcas = $repositorio->findAll();
+
+        return $this->render('page/marca.html.twig', [
             'controller_name' => 'PageController',
+            'marcas' => $marcas,
+            'motos' => $motos
         ]);
     }
 
-    /**
-     * @Route("/honda", name="honda")
-     */
-    public function honda(): Response
-    {
-        return $this->render('page/honda.html.twig', [
-            'controller_name' => 'PageController',
-        ]);
-    }
 
-    /**
-     * @Route("/kawasaki", name="kawasaki")
-     */
-    public function kawasaki(): Response
-    {
-        return $this->render('page/kawasaki.html.twig', [
-            'controller_name' => 'PageController',
-        ]);
-    }
-
-    /**
-     * @Route("/yamaha", name="yamaha")
-     */
-    public function yamaha(): Response
-    {
-        return $this->render('page/yamaha.html.twig', [
-            'controller_name' => 'PageController',
-        ]);
-    }
 }

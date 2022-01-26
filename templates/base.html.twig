@@ -3,48 +3,16 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>JANEX MOTORS S.A</title>
-        <link rel="icon" type="image/png" href="img/janex_logo.png"/>
-        <link rel="stylesheet" href="css/mini-style.css" type="text/css" media="screen and (min-width: 320px)"/>
-        <link rel="stylesheet" href="css/medium-style.css" type="text/css" media="screen and (min-width: 768px)"/>
-        <link rel="stylesheet" href="css/max-style.css" type="text/css" media="screen and (min-width: 1024px)"/>
+        <link rel="icon" type="image/png" href="/img/janex_logo.png"/>
+        <link rel="stylesheet" href="/css/mini-style.css" type="text/css" media="screen and (min-width: 320px)"/>
+        <link rel="stylesheet" href="/css/medium-style.css" type="text/css" media="screen and (min-width: 768px)"/>
+        <link rel="stylesheet" href="/css/max-style.css" type="text/css" media="screen and (min-width: 1024px)"/>
         {% block css %}{% endblock %}
         {% block javascript %}{% endblock %}
     </head>
     <body class="contenido">
 
-    <input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value="">
-    <label for="abrir-cerrar">&#9776; <span class="abrir"></span><span class="cerrar"></span></label>
-    <div id="sidebar" class="sidebar">
-        <ul class="menu">
-            <li><a href="/">INICIO</a></li>
-            <li><a href="/yamaha">YAMAHA</a>
-                <ul class="submenu">
-                    <li><a href="/yamaha#r1">R1</a></li>
-                    <li><a href="/yamaha#r6">R6</a></li>
-                    <li><a href="/yamaha#mt07">MT07</a></li>
-                </ul></li>
-            <li><a href="/honda">HONDA</a>
-                <ul class="submenu">
-                    <li><a href="/honda#cbr">CBR</a></li>
-                    <li><a href="/honda#cbf">CBF</a></li>
-                    <li><a href="/honda#hornet">HORNET</a></li>
-                </ul></li>
-            <li><a href="/kawasaki">KAWASAKI</a>
-                <ul class="submenu">
-                    <li><a href="/kawasaki#ninja">NINJA 1000S</a></li>
-                    <li><a href="/kawasaki#z800">Z800</a></li>
-                    <li><a href="/kawasaki#h2">H2</a></li>
-                </ul></li>
-            <li><a href="/ducati">DUCATI</a>
-                <ul class="submenu">
-                    <li><a href="/ducati#monster">MONSTER</a></li>
-                    <li><a href="/ducati#panigale">PANIGALE</a></li>
-                    <li><a href="/ducati#streetfighter">STREETFIGHTER</a></li>
-                </ul></li>
-                <li><a href="/contacto">CONTACTO</a></li>
-                <li><a href="/cita">CONCERTAR CITA</a></li>
-        </ul>
-    </div>
+    {{ include ('partials/menu.html.twig', { }) }}
 
     <div id="logo-container">
         {% block logo %}{% endblock %}
@@ -53,6 +21,6 @@
     {% block body %}{% endblock %}
 
      <p class="copyright"><i>Página web realizada por Janira F. Vidal, estudiante de Diseño de Aplicaciones Web en IES El Caminás.</i></p>
-        <p><img src="img/creative_commons.png" width="100" height="25" alt="cc" class="img-copy"/></p>
+        <p><img src="/img/creative_commons.png" width="100" height="25" alt="cc" class="img-copy"/></p>
     </body>
 </html>
