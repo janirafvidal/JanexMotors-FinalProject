@@ -39,7 +39,7 @@ function check(event){
     }else{
         alert("Mensaje enviado correctamente")
         document.getElementById("form").reset()
-        location.href = 'index.html'
+        location.href = '/'
         
     }
 

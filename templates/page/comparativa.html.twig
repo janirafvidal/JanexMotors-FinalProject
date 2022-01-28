@@ -11,27 +11,17 @@
         </p>
         <div class="info-motos">
         <ol class="dosColumnas">
-            <li><b><i>POTENCIA EN MOTOS DEPORTIVAS</i></b>
+        {% for estilo in estilos %}
+            <li><b><i>POTENCIA EN MOTOS {{estilo.nombre | upper}}</i></b>
                 <ol>
-                    <li>Kawasaki H2 (231 cv)</li>
-                    <li>Ducati Panigale (214 cv)</li>
-                    <li>Honda CBR (214 cv)</li>
-                    <li>Yamaha R1 (210 cv)</li>
-                    <li>Kawasaki Ninja 1000S (142 cv)</li>
-                    <li>Yamaha R6 (130 cv)</li>
+                {% for moto in estilo.motos %}
+                    <li>{{moto.nombre}} ({{moto.potencia}})</li>
+                    
+                {% endfor %}
                 </ol>
             </li>
-        
-            <li><b><i>POTENCIA EN MOTOS NAKED</i></b>
-                <ol>
-                    <li>Ducati StreetFighter (208 cv)</li>
-                    <li>Ducati Monster (150 cv)</li>
-                    <li>Kawasaki Z800 (113 cv)</li>
-                    <li>Honda Hornet (102 cv)</li>
-                    <li>Yamaha MT07 (78 cv)</li>
-                    <li>Honda CBF (47 cv)</li>
-                </ol>
-            </li>
+            
+        {% endfor %}
         </ol>
     </div>
 

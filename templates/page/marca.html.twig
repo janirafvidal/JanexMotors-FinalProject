@@ -1,13 +1,15 @@
 {% extends "base.html.twig" %}
 
 {% block javascript %}
-<script type="text/javascript" src="JS/getBiggerPics/code.js"></script>
+<script type="text/javascript" src="/JS/getBiggerPics/code.js"></script>
 {% endblock %}
 
 {% block logo %}
         <div class="dosColumnas">
             <img src="/img/janex_logo.png" width="250" height="150" alt="Janex_logo" id="logo_principal" />
-            <a title="SITIO OFICIAL" href="https://www.yamaha-motor.eu/es/es/"><img src="/img/yamaha_logo.png" width="290" height="175" alt="Yamaha_Logo"/></a>
+            <a title="SITIO OFICIAL" href="{{marca.link}}"><img src="{{marca.logo}}" width="290" height="175" alt="{{marca.nombre}}"/></a>
+
+
         </div>
 {% endblock %}
 

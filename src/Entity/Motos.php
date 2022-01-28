@@ -63,6 +63,12 @@ class Motos
      */
     private $alias;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Estilo::class, inversedBy="motos")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $estilo;
+
 
 
     public function getId(): ?int
@@ -174,6 +180,18 @@ class Motos
     public function setAlias(string $alias): self
     {
         $this->alias = $alias;
+
+        return $this;
+    }
+
+    public function getEstilo(): ?Estilo
+    {
+        return $this->estilo;
+    }
+
+    public function setEstilo(?Estilo $estilo): self
+    {
+        $this->estilo = $estilo;
 
         return $this;
     }

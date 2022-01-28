@@ -41,7 +41,7 @@ function showData(event){
         +document.getElementById("fecha").value +" por la " +radValue)
     
         document.getElementById("form").reset()
-        location.href = 'index.html'
+        location.href = '/'
     }
 
     }

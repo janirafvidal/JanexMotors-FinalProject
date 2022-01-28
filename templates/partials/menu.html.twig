@@ -11,7 +11,7 @@
 
                     {% for moto in marca.motos %}
 
-                    <li><a href="/marca/{{marca.nombre | lower}}/modelo#{{moto.alias}}/{{moto.id}}">{{moto.alias | upper}}</a></li>
+                    <li><a href="/marca/{{marca.nombre | lower}}/{{marca.id}}#{{moto.alias}}">{{moto.alias | upper}}</a></li>
 
                     {% endfor %}
                 
@@ -20,6 +20,6 @@
                 {% endfor %}
 
             <li><a href="/contacto">CONTACTO</a></li>
-                <li><a href="/cita">CONCERTAR CITA</a></li>
+            <li><a href="/cita">CONCERTAR CITA</a></li>
         </ul>
     </div>
