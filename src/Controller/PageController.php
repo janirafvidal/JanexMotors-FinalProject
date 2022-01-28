@@ -51,14 +51,11 @@ class PageController extends AbstractController
         $repositorio = $doctrine -> getRepository(Estilo::class);
         $estilos = $repositorio->findAll();
 
-        $repositorio = $doctrine -> getRepository(Motos::class);
-        $motos = $repositorio->findAll();
-
+        
         return $this->render('page/comparativa.html.twig', [
             'controller_name' => 'PageController',
             'marcas' => $marcas,
-            'estilos' => $estilos,
-            'motos' => $motos
+            'estilos' => $estilos
         ]);
     }
 
