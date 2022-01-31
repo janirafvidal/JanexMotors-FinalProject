@@ -15,31 +15,18 @@
         <img src="img/janex_logo.png" width="250" height="150" alt="Janex_logo" id="logo_principal"/></p>
 {% endblock %}
 {% block body %}
-
         
-        <form class="cita" id="form">
-            <label>Nombre</label><br>
-            <input type="text" name="nombre" id="name"/><br>
+        {{ form_start(form) }}
+        {{ form_errors(form) }}
+            {{ form_row(form.nombre) }}
+            {{ form_row(form.mail) }}
+            {{ form_row(form.telf) }}
+            {{ form_row(form.fecha) }}
+            {{ form_row(form.horario) }}
 
-            <label>E-mail</label><br>
-            <input type="text" name="e-mail" id="mail"/><br>
+            <button type="submit" class="button" id="enviar">Enviar</button>
 
-            <label>Teléfono</label><br>
-            <input type="text" name="teléfono" id="phone"/><br>
+        {{ form_end(form) }}
 
-            <label>Horario</label><br>
-            <input type="radio" name="horario" value="mañana"/>MAÑANA<br>
-            <input type="radio" name="horario" value="tarde"/>TARDE<br><br>
-
-
-            <label>Día de la cita</label><br>
-            <input type="text" name="date" id="fecha" readonly="readonly" />
-            <img src="img/calendario.png" id="selector" width="30" height="40"/>
             
-        
-
-            <input type="button" value="Enviar" class="button" id="enviar"/>
-            
-        </form>
-
 {% endblock %}

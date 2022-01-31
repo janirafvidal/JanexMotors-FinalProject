@@ -1,0 +1,45 @@
+{% extends "base.html.twig" %}
+
+{% block css %}
+<link rel="stylesheet" href="/css/calendar.css"/>
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript" src="/JS/date-data/code.js" ></script>
+<script type="text/javascript" src="/JS/calendar/calendar.js" ></script>
+<script type="text/javascript" src="/JS/calendar/calendar-setup.js" ></script>
+<script type="text/javascript" src="/JS/calendar/calendar-es.js" ></script>
+{% endblock %}
+
+{% block logo %}
+        <img src="img/janex_logo.png" width="250" height="150" alt="Janex_logo" id="logo_principal"/></p>
+{% endblock %}
+{% block body %}
+
+        
+        <form class="cita" id="form">
+            <label>Nombre</label><br>
+            <input type="text" name="nombre" id="name"/><br>
+
+            <label>E-mail</label><br>
+            <input type="text" name="e-mail" id="mail"/><br>
+
+            <label>Teléfono</label><br>
+            <input type="text" name="teléfono" id="phone"/><br>
+
+            <label>Horario</label><br>
+            <input type="radio" name="horario" value="mañana"/>MAÑANA<br>
+            <input type="radio" name="horario" value="tarde"/>TARDE<br><br>
+
+
+            <label>Día de la cita</label><br>
+            <input type="text" name="date" id="fecha" readonly="readonly" />
+            <img src="img/calendario.png" id="selector" width="30" height="40"/>
+            
+        
+
+            <input type="button" value="Enviar" class="button" id="enviar"/>
+            
+        </form>
+
+{% endblock %}

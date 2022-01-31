@@ -15,7 +15,7 @@
             <li><b><i>POTENCIA EN MOTOS {{estilo.nombre | upper}}</i></b>
                 <ol>
                 {% for moto in estilo.motos %}
-                    <li>{{moto.nombre}} ({{moto.potencia}})</li>
+                    <li>{{moto.nombre}} ({{moto.cilindrada}} y {{moto.potencia}})</li>
                     
                 {% endfor %}
                 </ol>

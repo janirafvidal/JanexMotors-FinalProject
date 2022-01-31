@@ -1,18 +1,14 @@
 onload = function() {
 
     this.document.getElementById("enviar").onclick = check
-    this.document.getElementById("msg").onkeypress = limitChar
-    this.document.getElementById("borrar").onclick = res
+    this.document.getElementById("mensaje_mensaje").onkeypress = limitChar
 
 }
 
-function res(){
-    document.getElementById("form").reset()
-}
 
 function limitChar(event){
 
-    if(this.value.length >= 200){
+    if(this.value.length >= 50){
         event.preventDefault()
     }
 
@@ -20,10 +16,10 @@ function limitChar(event){
 
 function check(event){
 
-    let name = document.getElementById("name").value
-    let telf = document.getElementById("telf").value
-    let mail = document.getElementById("mail").value
-    let city = document.getElementById("city").value
+    let name = document.getElementById("mensaje_nombre").value
+    let telf = document.getElementById("mensaje_telf").value
+    let mail = document.getElementById("mensaje_mail").value
+    let city = document.getElementById("mensaje_ciudad").value
     
     if (name == "" || telf == "" || mail == "" || city == "" ){
         alert("Todos los campos del formulario son obligatorios, por favor rellénelos como corresponde.")
@@ -38,8 +34,6 @@ function check(event){
 
     }else{
         alert("Mensaje enviado correctamente")
-        document.getElementById("form").reset()
-        location.href = '/'
         
     }
 
