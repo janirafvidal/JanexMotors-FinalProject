@@ -33,7 +33,7 @@ class Cita
     private $telf;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="string")
      */
     private $fecha;
 

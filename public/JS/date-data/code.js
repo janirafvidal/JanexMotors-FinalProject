@@ -1,7 +1,7 @@
 onload = function() {
 
     Calendar.setup({
-        inputField: "fecha",
+        inputField: "cita_fecha",
         ifFormat:   "%d / %m / %Y",
         button:     "selector"
       });
@@ -11,18 +11,18 @@ onload = function() {
 }
 
 function showData(event){
-    let name = document.getElementById("name").value
-    let date = document.getElementById("fecha").value
-    let mail = document.getElementById("mail").value
-    let phone = document.getElementById("phone").value
-    let radio = document.getElementsByName("horario")
-    let radValue
+    let name = document.getElementById("cita_nombre").value
+    let date = document.getElementById("cita_fecha").value
+    let mail = document.getElementById("cita_mail").value
+    let phone = document.getElementById("cita_telf").value
+    let radio = document.getElementsByName("cita_horario")
+    // let radValue
 
-    for (i=0; i < radio.length; i++) {
-        if (radio[i].checked) {
-           radValue = radio[i].value
-        }
-    }
+    // for (i=0; i < radio.length; i++) {
+    //     if (radio[i].checked) {
+    //        radValue = radio[i].value
+    //     }
+    // }
     
     if (name == "" || date == "" || mail == "" || phone == ""){
         alert("Todos los campos del formulario son obligatorios, por favor rellénelos")
@@ -37,11 +37,9 @@ function showData(event){
 
     }else{
 
-        alert(document.getElementById("name").value +" has solicitado una cita el día " 
-        +document.getElementById("fecha").value +" por la " +radValue)
+        alert(document.getElementById("cita_nombre").value +" has solicitado una cita el día " 
+        +document.getElementById("cita_fecha").value +" por la " +radio)
     
-        document.getElementById("form").reset()
-        location.href = '/'
     }
 
     }
