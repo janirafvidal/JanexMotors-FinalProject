@@ -18,7 +18,7 @@ class CitaType extends AbstractType
             ->add('nombre')
             ->add('mail')
             ->add('telf', TextType::class, array('label' => 'Teléfono'))
-            ->add('fecha')
+            ->add('fecha', TextType::class)
             ->add('horario', EntityType::class, array(
 
                 'class' => Horario::class,

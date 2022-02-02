@@ -15,7 +15,7 @@ function showData(event){
     let date = document.getElementById("cita_fecha").value
     let mail = document.getElementById("cita_mail").value
     let phone = document.getElementById("cita_telf").value
-    let radio = document.getElementsByName("cita_horario")
+    let radio = document.getElementById("cita_horario")
     // let radValue
 
     // for (i=0; i < radio.length; i++) {
@@ -37,9 +37,8 @@ function showData(event){
 
     }else{
 
-        alert(document.getElementById("cita_nombre").value +" has solicitado una cita el día " 
-        +document.getElementById("cita_fecha").value +" por la " +radio)
-    
+        alert(name + " has solicitado una cita el día " 
+        + date +" por la " + radio.options[radio.selectedIndex].text)
     }
 
     }

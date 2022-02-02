@@ -83,12 +83,12 @@ class Cita
         return $this;
     }
 
-    public function getFecha(): ?\DateTimeInterface
+    public function getFecha(): ?String
     {
         return $this->fecha;
     }
 
-    public function setFecha(\DateTimeInterface $fecha): self
+    public function setFecha(String $fecha): self
     {
         $this->fecha = $fecha;
 
