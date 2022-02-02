@@ -1,15 +1,16 @@
 {% extends "base.html.twig" %}
+{% block css %}
+<link src="/css/carousel.css">
+{% endblock %}
 
 {% block javascript %}
-<script type="text/javascript" src="/JS/getBiggerPics/code.js"></script>
+<script type="text/javascript" src="/JS/carousel/code.js"></script>
 {% endblock %}
 
 {% block logo %}
         <div class="dosColumnas">
             <img src="/img/janex_logo.png" width="250" height="150" alt="Janex_logo" id="logo_principal" />
             <a title="SITIO OFICIAL" href="{{marca.link}}"><img src="{{marca.logo}}" width="290" height="175" alt="{{marca.nombre}}"/></a>
-
-
         </div>
 {% endblock %}
 
@@ -19,7 +20,14 @@
     
     <h2 id="{{moto.alias}}" class="{{moto.marca.color}}">{{moto.nombre}}</h2>
         <p>{{moto.descripcion}}</p>
-        <p><img src="/{{moto.img}}" width="800" height="500" alt="{{moto.nombre}}"/></p>
+
+        {{ include ("/partials/carousel.html.twig" )}}
+
+        {# <img src="{{moto.img | split('.')|slice(0,-1)|join}}.png" width="800" height="500" alt="{{moto.nombre}}"/>
+        <img src="{{moto.img | split('.')|slice(0,-1)|join}}_02.png" width="800" height="500" alt="{{moto.nombre}}"/>
+        <img src="{{moto.img | split('.')|slice(0,-1)|join}}_03.png" width="800" height="500" alt="{{moto.nombre}}"/>
+        <img src="{{moto.img | split('.')|slice(0,-1)|join}}_04.png" width="800" height="500" alt="{{moto.nombre}}"/> #}
+
         <table class="{{moto.marca.tableclass}}">
             <caption><i> {{moto.nombre}} - Ficha técnica</i></caption>
             <tr>
