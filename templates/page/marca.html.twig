@@ -18,15 +18,11 @@
 
 {% for moto in motos %}
     
-    <h2 id="{{moto.alias}}" class="{{moto.marca.color}}">{{moto.nombre}}</h2>
+    <h2 id="{{moto.alias}}" class="{{moto.marca.color}}" class="moto">{{moto.nombre}}</h2>
         <p>{{moto.descripcion}}</p>
 
         {{ include ("/partials/carousel.html.twig" )}}
 
-        {# <img src="{{moto.img | split('.')|slice(0,-1)|join}}.png" width="800" height="500" alt="{{moto.nombre}}"/>
-        <img src="{{moto.img | split('.')|slice(0,-1)|join}}_02.png" width="800" height="500" alt="{{moto.nombre}}"/>
-        <img src="{{moto.img | split('.')|slice(0,-1)|join}}_03.png" width="800" height="500" alt="{{moto.nombre}}"/>
-        <img src="{{moto.img | split('.')|slice(0,-1)|join}}_04.png" width="800" height="500" alt="{{moto.nombre}}"/> #}
 
         <table class="{{moto.marca.tableclass}}">
             <caption><i> {{moto.nombre}} - Ficha técnica</i></caption>

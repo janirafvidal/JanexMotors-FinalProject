@@ -10,43 +10,19 @@
   <ol class="carousel__viewport">
     <li  id="{{moto.alias}}__slide1" tabindex="0" class="carousel__slide">
     <img src="{{moto.img | split('.')|slice(0,-1)|join}}.png" width="800" height="500" alt="{{moto.nombre}}"/>
-      <div class="carousel__snapper">
-        <a href="#{{moto.alias}}__slide4"
-           class="carousel__prev">Go to last slide</a>
-        <a href="#{{moto.alias}}__slide2"
-           class="carousel__next">Go to next slide</a>
-      </div>
       </li>
     
     <li  id="{{moto.alias}}__slide2" tabindex="1" class="carousel__slide">
     <img src="{{moto.img | split('.')|slice(0,-1)|join}}_02.png" width="800" height="500" alt="{{moto.nombre}}"/>
-      <div class="carousel__snapper">
-      <a href="#{{moto.alias}}__slide1"
-         class="carousel__prev">Go to previous slide</a>
-      <a href="#{{moto.alias}}__slide3"
-         class="carousel__next">Go to next slide</a>
-</div>
-</li>
+      </li>
 
     <li  id="{{moto.alias}}__slide3" tabindex="2" class="carousel__slide">
     <img src="{{moto.img | split('.')|slice(0,-1)|join}}_03.png" width="800" height="500" alt="{{moto.nombre}}"/>
-      <div class="carousel__snapper">
-      <a href="#{{moto.alias}}__slide2"
-         class="carousel__prev">Go to previous slide</a>
-      <a href="#{{moto.alias}}__slide4"
-         class="carousel__next">Go to next slide</a>
-</div>
-</li>
+      </li>
 
     <li id="{{moto.alias}}__slide4" tabindex="3" class="carousel__slide">
     <img src="{{moto.img | split('.')|slice(0,-1)|join}}_04.png" width="800" height="500" alt="{{moto.nombre}}"/>
-      <div class="carousel__snapper">
-      <a href="#{{moto.alias}}__slide3"
-         class="carousel__prev">Go to previous slide</a>
-      <a href="#{{moto.alias}}__slide1"
-         class="carousel__next">Go to first slide</a>
-         </div>
-         </li>
+      </li>
 
   </ol>
   <aside class="carousel__navigation">
