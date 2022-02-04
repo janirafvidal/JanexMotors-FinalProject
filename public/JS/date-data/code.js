@@ -1,10 +1,10 @@
 onload = function() {
 
-    Calendar.setup({
-        inputField: "cita_fecha",
-        ifFormat:   "%d / %m / %Y",
-        button:     "selector"
-      });
+    // Calendar.setup({
+    //     inputField: "cita_fecha",
+    //     ifFormat:   "%d / %m / %Y",
+    //     button:     "selector"
+    //   });
 
     this.document.getElementById("enviar").onclick = showData
 

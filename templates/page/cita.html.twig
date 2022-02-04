@@ -1,14 +1,19 @@
 {% extends "base.html.twig" %}
 
 {% block css %}
-<link rel="stylesheet" href="/css/calendar.css"/>
+{# <link rel="stylesheet" href="/css/calendar.css"/> #}
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
 {% endblock %}
 
 {% block javascript %}
 <script type="text/javascript" src="/JS/date-data/code.js" ></script>
-<script type="text/javascript" src="/JS/calendar/calendar.js" ></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+<script type="text/javascript" src="/JS/calendarJquery/code.js" ></script>
+{# <script type="text/javascript" src="/JS/calendar/calendar.js" ></script>
 <script type="text/javascript" src="/JS/calendar/calendar-setup.js" ></script>
-<script type="text/javascript" src="/JS/calendar/calendar-es.js" ></script>
+<script type="text/javascript" src="/JS/calendar/calendar-es.js" ></script> #}
 {% endblock %}
 
 {% block logo %}
