@@ -1,0 +1,35 @@
+{% extends "base.html.twig" %}
+{% block logo %}
+        <img src="img/janex_logo.png" width="250" height="150" alt="Janex_logo" id="logo_principal"/></p>
+{% endblock %}
+{% block body %}
+        <h1>SOBRE NOSOTROS ...</h1>
+        <p>
+        Janex Motors es un concesionario multimarca con más de 15 años de experiencia en el sector automovilístico.
+        Empezamos como taller de reparaciones especializado en motos de todo tipo. Poco a poco nos fuimos convirtiendo en 
+        un compra-venta de modelos antiguos para restaurar, manteniendo el servicio de reparaciones a nuestros clientes.
+        </p>
+        <br>
+        <p>En el año 2010 decidimos dedicar el 90% de nuestro negocio a la compra-venta de modelos actuales, ya que el sector 
+        estaba en pleno auge y había mucha demanda de motos. Los nuevos aspectos agresivo-deportivos llamaban la atención a cualquiera.
+         Nuestro servicio de reparaciónes fue parcialmente sustituido por el servicio de atención al cliente y compra-ventas.
+        </p>
+        <br>
+        <p>A día de hoy, hemos ampliado nuestro centro de Castellón y hemos podido recuperar nuestro servicio más antiguo. Somos un 
+        concesionario multimarca que ofrece garantías, con su propio taller y sucursales en las ciudades clave del automovilismo como 
+        por ejemplo Jerez o Motorland en Aragón, templo de las motos. 
+        </p>
+        <br>
+        <p>Desde Janex Motors deseamos que tengas la mejor experiencia de compra posible y queremos recordarte que las motos no son un juguete. 
+        Por favor, conduce con cuidado, por ti y por todos los demás usuarios de la vía. Seguridad ante todo, y como dice nuestro eslógan: 
+        "¡Dale gas a la vida!".
+        
+
+        <video [muted]="true" autoplay playsinline loop>
+                <source src="/media/motos.mp4" type="video/mp4" />
+                <source src="/media/motos.mp4" type="video/webm" />
+                <source src="/media/motos.mp4" type="video/ogx" />
+       Su navegador no soporta contenido multimedia.
+       </video>
+
+{% endblock %}

@@ -100,6 +100,19 @@ class PageController extends AbstractController
     }
 
     /**
+     * @Route("/sobre-nosotros", name="sobre-nosotros")
+     */
+    public function sobreNosotros(ManagerRegistry $doctrine): Response
+    {
+        $repositorio = $doctrine -> getRepository(Marcas::class);
+        $marcas = $repositorio->findAll();
+        return $this->render('page/sobre-nosotros.html.twig', [
+            'controller_name' => 'PageController',
+            'marcas' => $marcas
+        ]);
+    }
+
+    /**
      * @Route("/contacto", name="contacto")
      */
     public function contacto(ManagerRegistry $doctrine, Request $request): Response

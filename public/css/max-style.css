@@ -178,6 +178,22 @@ input#abrir-cerrar:checked + label[for="abrir-cerrar"] .abrir {
     font-size:1rem;   
 }
 
+iframe{
+    margin-top: 150px;
+    display:block;
+    width: 600px;
+    height: 450px;
+}
+
+video{
+    width: 650px;
+    height: 350px;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: block;
+    justify-content: center;
+}
 
 
 /*IMÁGENES CENTRADAS*/
