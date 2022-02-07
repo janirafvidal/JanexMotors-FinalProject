@@ -186,6 +186,11 @@ iframe{
     height: 125px;
 }
 
+label {
+    display: inline-block;
+    width: 5em;
+  }
+
 /*IMÁGENES CENTRADAS*/
 
 img{

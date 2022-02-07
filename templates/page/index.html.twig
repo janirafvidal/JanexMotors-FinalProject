@@ -1,6 +1,14 @@
 {% extends "base.html.twig" %}
 
+{% block css %}
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+{% endblock %}
+
 {% block javascript %}
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+<script type="text/javascript" src="/JS/tooltipJquery/code.js"></script>
 <script type="text/javascript" src="/JS/displayInfo/code.js"></script>
 {% endblock %}
 
@@ -10,14 +18,16 @@
 
 {% block body %}
 
- <p>Bienvenid@ al catálogo on-line de <a href="/sobre-nosotros">Janex Motors</a>. Somos un concesionario multimarca situado en Castellón de la Plana.
+ <p>Bienvenid@ al catálogo on-line de <a href="/sobre-nosotros" title="Pincha en el enlace para saber más sobre nosotros.">Janex Motors</a>.
+  Somos un concesionario multimarca situado en Castellón de la Plana.
  Contamos con más de 15 años de experiencia en el mercado de las motos y actualmente estamos expandiendo nuestras sucursales a otras ciudades.
  Aquí podrás encontrar información sobre algunas de las motos más vendidas del momento y concertar una cita para probarlas, y todo sin 
  ningún tipo de compromiso.</p>
 <br>
- <p>Si no consigues decantarte por un modelo específico, no te preocupes. Nuestros profesionales te darán una serie de <a href="/consejos">consejos</a>
+ <p>Si no consigues decantarte por un modelo específico, no te preocupes. Nuestros profesionales te darán una serie de <a href="/consejos" 
+ title="Pincha en el enlace para ver los consejos.">consejos</a>
   y pautas a tener en cuenta a la hora de comprar tu nueva "compañera de curvas". Además, con los datos que ofrecemos podrás hacer 
-  una <a href="/comparativa">comparativa</a> entre las motos, teniendo en cuenta el cavallaje y su potencia en cc para ver qué modelo se adapta más a 
+  una <a href="/comparativa" title="Pincha en el enlace para ver una comparativa de las motos.">comparativa</a> entre las motos, teniendo en cuenta el cavallaje y su potencia en cc para ver qué modelo se adapta más a 
   tus necesidades. En caso de seguir indeciso, puedes contactar con nosotros desde el formulario "CONTACTO" que aparece al final del menú lateral.</p>
   <br>
 <p>A continuación podrás encontrar las principales marcas con las que trabajamos. Pinchando en las imágenes desplegarás más información sobre ellas.</p>

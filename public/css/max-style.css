@@ -195,6 +195,11 @@ video{
     justify-content: center;
 }
 
+label {
+    display: inline-block;
+    width: 5em;
+  }
+
 
 /*IMÁGENES CENTRADAS*/
 
