@@ -8,7 +8,7 @@ onload = function() {
 
 function limitChar(event){
 
-    if(this.value.length >= 50){
+    if(this.value.length >= 200){
         event.preventDefault()
     }
 
