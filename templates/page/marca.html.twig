@@ -1,10 +1,10 @@
 {% extends "base.html.twig" %}
 {% block css %}
-<link src="/css/carousel.css">
+<link src={{ asset("/css/carousel.css") }}>
 {% endblock %}
 
 {% block javascript %}
-<script type="text/javascript" src="/JS/carousel/code.js"></script>
+<script type="text/javascript" src={{ asset("/JS/carousel/code.js") }}></script>
 {% endblock %}
 
 {% block logo %}
