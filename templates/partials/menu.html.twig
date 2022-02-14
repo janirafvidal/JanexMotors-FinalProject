@@ -2,16 +2,16 @@
     <label for="abrir-cerrar">&#9776; <span class="abrir"></span><span class="cerrar"></span></label>
     <div id="sidebar" class="sidebar">
         <ul class="menu">
-            <li><a href="/">INICIO</a></li>
+            <li><a href="/JanexMotors/">INICIO</a></li>
 
                 {% for marca in marcas %}
-                <li><a href="/marca/{{marca.nombre | lower}}/{{marca.id}}">{{marca.nombre | upper}}</a>
+                <li><a href="/JanexMotors/marca/{{marca.nombre | lower}}/{{marca.id}}">{{marca.nombre | upper}}</a>
 
                         <ul class="submenu">
 
                     {% for moto in marca.motos %}
 
-                    <li><a href="/marca/{{marca.nombre | lower}}/{{marca.id}}#{{moto.alias}}">{{moto.alias | upper}}</a></li>
+                    <li><a href="/JanexMotors/marca/{{marca.nombre | lower}}/{{marca.id}}#{{moto.alias}}">{{moto.alias | upper}}</a></li>
 
                     {% endfor %}
                 
@@ -19,7 +19,7 @@
 
                 {% endfor %}
 
-            <li><a href="/contacto">CONTACTO</a></li>
-            <li><a href="/cita">CONCERTAR CITA</a></li>
+            <li><a href="/JanexMotors/contacto">CONTACTO</a></li>
+            <li><a href="/JanexMotors/cita">CONCERTAR CITA</a></li>
         </ul>
     </div>

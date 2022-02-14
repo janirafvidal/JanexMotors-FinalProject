@@ -1,16 +1,16 @@
 {% extends "base.html.twig" %}
 {% block css %}
-<link src={{ asset("/css/carousel.css") }}>
+<link src={{ asset("/JanexMotors/css/carousel.css") }}>
 {% endblock %}
 
 {% block javascript %}
-<script type="text/javascript" src={{ asset("/JS/carousel/code.js") }}></script>
+<script type="text/javascript" src={{ asset("/JanexMotors/JS/carousel/code.js") }}></script>
 {% endblock %}
 
 {% block logo %}
         <div class="dosColumnas">
-            <img src="/img/janex_logo.png" width="250" height="150" alt="Janex_logo" id="logo_principal" />
-            <a title="SITIO OFICIAL" href="{{marca.link}}"><img src="{{marca.logo}}" width="290" height="175" alt="{{marca.nombre}}"/></a>
+            <img src="/JanexMotors/img/janex_logo.png" width="250" height="150" alt="Janex_logo" id="logo_principal" />
+            <a title="SITIO OFICIAL" href="{{marca.link}}"><img src="/JanexMotors{{marca.logo}}" width="290" height="175" alt="{{marca.nombre}}"/></a>
         </div>
 {% endblock %}
 
