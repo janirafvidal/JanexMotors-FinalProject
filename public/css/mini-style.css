@@ -65,7 +65,28 @@ html { background-image: url(../img/finish-flag.jpg) }
     display: none;
 }
 
+/* BTN IR ARRIBA */
 
+#topbtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #00a2ff; /* Set a background color */
+    color: rgb(255, 255, 255); /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  #topbtn:hover {
+    background-color: rgb(228, 231, 230); /* Add a dark-grey background on hover */
+    color: rgb(0, 0, 0); /* Text color */
+  }
 
 
 /*MENU DE INICIO*/
@@ -211,7 +232,7 @@ img{
 
 table {
     border-collapse: collapse;
-    width: 90%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
     box-sizing:border-box;
@@ -219,7 +240,8 @@ table {
   }
   
   th, td {
-    padding: 8px;
+    font-size: 10px;
+    padding: 5px;
     text-align: center;
     border-bottom: 1px solid rgb(0, 0, 0);
     
@@ -346,7 +368,7 @@ table {
 
   h1{
     padding-bottom: 20px;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgb(64, 107, 224);
@@ -355,14 +377,14 @@ table {
  .red{ /*Honda & Ducati*/
     margin-bottom: 10px;
     margin-top: 40px;
-    font-size: 32px;
+    font-size: 20px;
     text-align: left;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgb(255, 0, 0);
 }
 
 .green{ /*Kawasaki*/
-    font-size: 32px;
+    font-size: 20px;
     margin-bottom: 10px;
     margin-top: 40px;
     text-align: left;
@@ -371,7 +393,7 @@ table {
 }
 
 .blue{ /*Yamaha*/
-    font-size: 32px;
+    font-size: 20px;
     margin-top: 40px;
     margin-bottom: 10px;
     text-align: left;
