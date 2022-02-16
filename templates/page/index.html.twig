@@ -8,33 +8,33 @@
 {% block javascript %}
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-<script type="text/javascript" src={{ asset("/JanexMotors/JS/tooltipJquery/code.js") }}></script>
-<script type="text/javascript" src={{ asset("/JanexMotors/JS/displayInfo/code.js") }}></script>
+<script type="text/javascript" src={{ asset("/JS/tooltipJquery/code.js") }}></script>
+<script type="text/javascript" src={{ asset("/JS/displayInfo/code.js") }}></script>
 {% endblock %}
 
 {% block logo %}
-        <img src="/JanexMotors/img/janex_logo.png" width="250" height="150" alt="Janex_logo" id="logo_principal"/></p>
+        <img src="/img/janex_logo.png" width="250" height="150" alt="Janex_logo" id="logo_principal"/></p>
 {% endblock %}
 
 {% block body %}
 
- <p>Bienvenid@ al catálogo on-line de <a href="/JanexMotors/sobre-nosotros" title="Pincha en el enlace para saber más sobre nosotros.">Janex Motors</a>.
+ <p>Bienvenid@ al catálogo on-line de <a href="/sobre-nosotros" title="Pincha en el enlace para saber más sobre nosotros.">Janex Motors</a>.
   Somos un concesionario multimarca situado en Castellón de la Plana.
  Contamos con más de 15 años de experiencia en el mercado de las motos y actualmente estamos expandiendo nuestras sucursales a otras ciudades.
  Aquí podrás encontrar información sobre algunas de las motos más vendidas del momento y concertar una cita para probarlas, y todo sin 
  ningún tipo de compromiso.</p>
 <br>
- <p>Si no consigues decantarte por un modelo específico, no te preocupes. Nuestros profesionales te darán una serie de <a href="/JanexMotors/consejos" 
+ <p>Si no consigues decantarte por un modelo específico, no te preocupes. Nuestros profesionales te darán una serie de <a href="/consejos" 
  title="Pincha en el enlace para ver los consejos.">consejos</a>
   y pautas a tener en cuenta a la hora de comprar tu nueva "compañera de curvas". Además, con los datos que ofrecemos podrás hacer 
-  una <a href="/JanexMotors/comparativa" title="Pincha en el enlace para ver una comparativa de las motos.">comparativa</a> entre las motos, teniendo en cuenta el cavallaje y su potencia en cc para ver qué modelo se adapta más a 
+  una <a href="/comparativa" title="Pincha en el enlace para ver una comparativa de las motos.">comparativa</a> entre las motos, teniendo en cuenta el cavallaje y su potencia en cc para ver qué modelo se adapta más a 
   tus necesidades. En caso de seguir indeciso, puedes contactar con nosotros desde el formulario "CONTACTO" que aparece al final del menú lateral.</p>
   <br>
 <p>A continuación podrás encontrar las principales marcas con las que trabajamos. Pinchando en las imágenes desplegarás más información sobre ellas.</p>
 
         {% for marca in marcas %}
                 
-        <img src="/JanexMotors{{marca.img}}" width="700" height="175" alt="{{marca.nombre}}_Logo" class="marcas"/>
+        <img src="{{marca.img}}" width="700" height="175" alt="{{marca.nombre}}_Logo" class="marcas" style="cursor:pointer;"/>
         <p class="info">{{marca.descripcion}}
         </p>
         {% endfor %}

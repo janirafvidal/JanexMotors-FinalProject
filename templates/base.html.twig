@@ -3,12 +3,14 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>JANEX MOTORS S.A</title>
-        <link rel="icon" type="image/png" href="/JanexMotors/img/janex_logo.png"/>
+        <link rel="icon" type="image/png" href="/img/janex_logo.png"/>
+        <link rel="stylesheet" href={{ asset("/css/mini-style.css") }} type="text/css" media="screen and (min-width: 320px)"/>
+        <link rel="stylesheet" href={{ asset("/css/medium-style.css") }} type="text/css" media="screen and (min-width: 768px)"/>
+        <link rel="stylesheet" href={{ asset("/css/max-style.css") }} type="text/css" media="screen and (min-width: 1024px)"/>
         {% block css %}{% endblock %}
-        <link rel="stylesheet" href={{ asset("/JanexMotors/css/mini-style.css") }} type="text/css" media="screen and (min-width: 320px)"/>
-        <link rel="stylesheet" href={{ asset("/JanexMotors/css/medium-style.css") }} type="text/css" media="screen and (min-width: 768px)"/>
-        <link rel="stylesheet" href={{ asset("/JanexMotors/css/max-style.css") }} type="text/css" media="screen and (min-width: 1024px)"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         {% block javascript %}{% endblock %}
+       
     </head>
     <body class="contenido">
 
@@ -20,7 +22,11 @@
 
     {% block body %}{% endblock %}
 
+     <button id="topbtn"><i class="fa-solid fa-arrow-up-long"></i></button> 
+
      <p class="copyright"><i>Página web realizada por Janira F. Vidal, estudiante de Diseño de Aplicaciones Web en IES El Caminás.</i></p>
-        <p><img src="/JanexMotors/img/creative_commons.png" width="100" height="25" alt="cc" class="img-copy"/></p>
+     <img src="/img/creative_commons.png" width="100" height="25" alt="cc" class="img-copy"/>
+    <script type="text/javascript" src={{ asset("/JS/topBtn/code.js") }} ></script>
+
     </body>
 </html>
